@@ -1,0 +1,40 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-color: black;
+    color: white;
+    font-family: "Courier New";
+}
+
+.movie-list {
+    display: flex;
+    padding: 3rem;
+}
+
+.card {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    height: 350px;
+    width: 400px;
+    min-width: 250px;
+    padding: 1.5rem;
+
+    border-radius: 16px;
+    background: #17141D;
+    box-shadow: -1rem 0 3rem black;
+
+    transition: .2s;
+}
+
+.card:hover {
+    transform: translateY(-1rem);
+}
+
+.card:hover~.card {
+    transform: translateX(130px);
+}
+
+.card:not(:first-child) {
+    margin-left: -130px;
+}
