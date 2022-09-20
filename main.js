@@ -1,4 +1,5 @@
 "use strict";
+
 // API
 function fetchData() {
     console.log("START FETCH");
