@@ -14,7 +14,7 @@ body {
     height: 300px;
 }
 
-.jumbotron {
+.container {
     height: 40vh;
     position: relative;
     background-image: url("Images/popcorn.gif");
@@ -23,24 +23,24 @@ body {
 
 }
 
-.container {
+.jumbotron {
     position: absolute;
     left: 25px;
     top: 50px;
     line-height: 1.5rem;
 }
 
-.container h1 {
+.jumbotron h1 {
     font-family: 'Nabla', cursive;
     font-size: 5rem;
 }
 
-.container h2 {
+.jumbotron h2 {
     font-family: 'Bebas Neue', cursive;
     font-size: 2rem;
 }
 
-.container input {
+.jumbotron input {
     width: 50%;
 }
 
