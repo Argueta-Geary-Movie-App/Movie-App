@@ -1,15 +1,21 @@
 "use strict";
 // PAGE LOADING MESSAGE
-document.onreadystatechange = function() {
-    if (document.readyState !== "complete") {
-        document.querySelector("body").style.visibility = "hidden";
-        document.querySelector("#loader").style.visibility = "visible";
-    } else {
-        document.querySelector("#loader").style.display = "none";
-        document.querySelector("body").style.visibility = "visible";
-    }
-    // alert("Page Loading");
-};
+    document.onreadystatechange = function () {
+        if (document.readyState !== "complete") {
+            document.querySelector("body").style.visibility = "hidden";
+            document.querySelector("#loader").style.visibility = "visible";
+            // alert("Page Loading");
+        } else {
+            // alert("WHy Loading");
+            setTimeout(() => {
+                document.querySelector("#loader").style.display = "none";
+                document.querySelector("body").style.visibility = "visible";
+            }, 1000);
+
+        }
+    };
+
+
 // API
 function fetchData() {
     console.log("START FETCH");
