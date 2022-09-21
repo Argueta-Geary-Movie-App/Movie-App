@@ -26,11 +26,11 @@ function fetchData() {
                                 </article>`
             }).join("")
             console.log(html);
-            $('#app').innerHTML = html;
+            document.querySelector('#app').innerHTML = html;
         })
         .catch(error => {
             console.log(error);
-        });
+        })
 }
 
 fetchData();
