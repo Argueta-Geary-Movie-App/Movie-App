@@ -13,10 +13,24 @@ function fetchData() {
         .then(data => {
             console.log(data);
             console.table([data])
+            const html = data.map(movie => {
+                return `<article class="card">
+                                    <header class="card-header">
+                                        <h2 class="title">${movie.title}</h2>
+                                        <div class="rating">Rating: ${movie.rating}</div>
+                                        <div class="genre">Director: ${movie.director}</div>
+                                        <div class="id">${movie.id}</div>
+                                        <button type="button" class="edit">Edit</button>
+                                        <button type="button" class="delete">Delete</button>
+                                    </header>
+                                </article>`
+            }).join("")
+            console.log(html);
+            $('#app').innerHTML = html;
         })
         .catch(error => {
             console.log(error);
-        })
+        });
 }
 
 fetchData();
