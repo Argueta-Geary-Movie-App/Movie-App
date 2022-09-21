@@ -1,35 +1,43 @@
 "use strict";
 // PAGE LOADING MESSAGE
-    document.onreadystatechange = function () {
-        if (document.readyState !== "complete") {
-            document.querySelector("body").style.visibility = "hidden";
-            document.querySelector("#loader").style.visibility = "visible";
-            // alert("Page Loading");
-        } else {
-            // alert("WHy Loading");
-            setTimeout(() => {
-                document.querySelector("#loader").style.display = "none";
-                document.querySelector("body").style.visibility = "visible";
-            }, 1000);
+document.onreadystatechange = function () {
+    if (document.readyState !== "complete") {
+        document.querySelector("body").style.visibility = "hidden";
+        document.querySelector("#loader").style.visibility = "visible";
+        // alert("Page Loading");
+    } else {
+        // alert("WHy Loading");
+        setTimeout(() => {
+            document.querySelector("#loader").style.display = "none";
+            document.querySelector("body").style.visibility = "visible";
+        }, 1000);
 
-        }
-    };
+    }
+};
 
 
 // API
-function fetchData() {
-    console.log("START FETCH");
-    fetch("https://aluminum-coral-comic.glitch.me/movies")
-        .then(response => {
-            console.log(response); //RESPONSE BODY
-            // const data = response.json();
-            // console.log(data);
-            return response.json()
-        })
-        .then(data => {
-            console.log(data);
-            console.table([data])
-            const html = data.map(movie => {
+const moviePoster = async (title) => {
+    let posterData = await fetch(`http://www.omdbapi.com/?apikey=thewdb&t=${title}`)
+    let posterJson = await posterData.json();
+    return posterJson;
+}
+
+const fetchData = async () => {
+   let glitchData = await fetch("https://aluminum-coral-comic.glitch.me/movies")
+    let glitchJson = await glitchData.json();
+        // .then(response => {
+        //     console.log(response); //RESPONSE BODY
+        //     // const data = response.json();
+        //     // console.log(data);
+        //     return response.json()
+        // })
+        // .then(data => {
+        //     console.log(data);
+        //     console.table([data])
+            const html = await Promise.all (glitchJson.map(async movie => {
+                let omdbPoster = await moviePoster(movie.title);
+
                 return `<article class="card">
                                     <header class="card-header">
                                         <h2 class="title">${movie.title}</h2>
@@ -41,41 +49,39 @@ function fetchData() {
                                     </header>
                                 </article>`
             }).join("")
-            console.log(html);
+            // console.log(html);
             document.querySelector('#app').insertAdjacentHTML("afterbegin", html);
-        })
-        .catch(error => {
-            console.log(error);
-        })
 }
+
 fetchData();
 
 // POST (Create)
-function postData() {
-    fetch("https://reqres.in/api/users", {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-            name: "morpheus",
-            job: "leader"
-        })
-    })
-        .then(response => {
-            if (!response.ok) {
-                throw Error("ERROR");
-            }
-            return response.json();
-        })
-        .then(data => {
-            console.log(data);
-        })
-        .catch(error => {
-            console.log(error);
-        });
-}
-postData();
+// function postData() {
+//     fetch("https://reqres.in/api/users", {
+//         method: 'POST',
+//         headers: {
+//             'Content-Type': 'application/json'
+//         },
+//         body: JSON.stringify({
+//             name: "morpheus",
+//             job: "leader"
+//         })
+//     })
+//         .then(response => {
+//             if (!response.ok) {
+//                 throw Error("ERROR");
+//             }
+//             return response.json();
+//         })
+//         .then(data => {
+//             console.log(data);
+//         })
+//         .catch(error => {
+//             console.log(error);
+//         });
+// }
+//
+// postData();
 
 // Event Listeners
 
