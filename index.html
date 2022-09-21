@@ -6,21 +6,28 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Movie App</title>
-    <!--external CSS-->
+    <!--EXTERNAL CSS-->
     <link rel="stylesheet" href="main.css">
     <!--GOOGLE FONTS-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Serif:ital,wght@1,200&family=Nabla&display=swap" rel="stylesheet">
 
-
 </head>
 <body>
-<div id="loader">
-    <img id="loading-image" src="Images/Infinity-2.6s-304px.gif" alt="Loading..." />
-</div>
+
+
 <main id="main">
-<!-- Jumbotron -->
+
+
+<!--LOADING PAGE -->
+<div id="loader">
+    <img id="loading-image" src="Images/loading4.gif" alt="Loading...">
+</div>
+
+
+
+<!--JUMBOTRON -->
     <div class="jumbotron">
 
         <div id="" class="container">
@@ -36,6 +43,7 @@
     <div id="app">
 
         <!--HARD CODING THE DATA TO SEE HOW THE CARDS ANIMATIONS WILL WORK WHEN WE INCORPORATE THE renderData FUNCTION THAT WILL THEN REPLACE THE INNER HTML WITH THE JSON DATA-->
+
         <!--    <article class="card">-->
         <!--        <header class="card-header">-->
         <!--            <h2 class="title">The Lord Of The Rings</h2>-->
@@ -46,12 +54,15 @@
         <!--        </header>-->
         <!--    </article>-->
 
+
     </div>
 </main>
-<!--JQUERY-->
 
+<!--JQUERY-->
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"
         integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+<!--EXTERNAL JS-->
 <script src="main.js"></script>
+
 </body>
 </html>
