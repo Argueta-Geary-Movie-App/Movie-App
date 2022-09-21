@@ -15,41 +15,43 @@ body {
 }
 
 .container {
-    height: 40vh;
+    height: 115vh;
     position: relative;
-    background-image: url("Images/popcorn.gif");
+    background-image: url("Images/blockbuster2.webp");
     background-repeat: no-repeat;
     background-size: cover;
 
 }
 
-.jumbotron {
-    position: absolute;
-    left: 25px;
-    top: 50px;
-    line-height: 1.5rem;
+/*.jumbotron {*/
+/*    position: absolute;*/
+/*    !*left: 25px;*!*/
+/*    !*top: 50px;*!*/
+/*    line-height: 1.5rem;*/
+/*}*/
+
+.search-movie {
+    text-align: center;
+    background-color: #016FFF;
 }
 
-.jumbotron h1 {
+.search-movie h2 {
     font-family: 'Nabla', cursive;
-    font-size: 5rem;
-}
-
-.jumbotron h2 {
-    font-family: 'Bebas Neue', cursive;
     font-size: 2rem;
+    margin: 0;
 }
 
-.jumbotron input {
-    width: 50%;
+.search-movie input {
+    width: 30%;
 }
 
 #app {
+    background-color: #016FFF;
     display: flex;
     padding: 3rem;
-    margin: 5rem;
+    /*margin: 5rem;*/
     flex-wrap: wrap;
-    margin-left: 20%;
+    /*margin-left: 20%;*/
 }
 
 .card {
@@ -92,4 +94,7 @@ body {
     display: flex;
     justify-content: center;
 
+}
+h2 {
+    color: #FFDF00;
 }
