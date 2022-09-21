@@ -37,10 +37,11 @@ const fetchData = async () => {
         //     console.table([data])
             const html = await Promise.all (glitchJson.map(async movie => {
                 let omdbPoster = await moviePoster(movie.title);
-
-                return `<article class="card">
+                console.log(omdbPoster.Poster);
+                return `<article class="card background-image: url">
                                     <header class="card-header">
                                         <h2 class="title">${movie.title}</h2>
+                                        <div><img src=${omdbPoster.Poster}></div>
                                         <div class="rating">Rating: ${movie.rating}</div>
                                         <div class="genre">Director: ${movie.director}</div>
                                         <div class="id">${movie.id}</div>
@@ -48,9 +49,8 @@ const fetchData = async () => {
                                         <button type="button" class="delete">Delete</button>
                                     </header>
                                 </article>`
-            }).join("")
-            // console.log(html);
-            document.querySelector('#app').insertAdjacentHTML("afterbegin", html);
+            }))
+    document.querySelector('#app').insertAdjacentHTML("afterbegin", html);
 }
 
 fetchData();
