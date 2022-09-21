@@ -9,42 +9,42 @@
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
+<div id="loader">
+    <img id="loading-image" src="Infinity-2.6s-304px.gif" alt="Loading..." />
+</div>
+<main id="main">
+<!-- Jumbotron -->
+    <div class="jumbotron">
 
-
-<div class="jumbotron">
-
-    <div class="container">
-    <h1>MOVIES-R-US</h1>
-    <h2>Showcasing the latest movies from the comfort of your home</h2>
-    <!--TEXT INPUT BOX TO ADD NEW MOVIE-->
-    <input class='find-movie' type="text" placeholder="Find a Movie">
-    <button class='find-movie' type="submit">Find Movie</button>
+        <div id="" class="container">
+            <h1>MOVIES-R-US</h1>
+            <h2>Showcasing the latest movies from the comfort of your home</h2>
+            <!--TEXT INPUT BOX TO ADD NEW MOVIE-->
+            <input class='find-movie' type="text" placeholder="Find a Movie">
+            <button class='find-movie' type="submit">Find Movie</button>
+        </div>
     </div>
 
-</div>
+    <!-- Movie Card -->
+    <div id="app">
 
-<br>
+        <!--HARD CODING THE DATA TO SEE HOW THE CARDS ANIMATIONS WILL WORK WHEN WE INCORPORATE THE renderData FUNCTION THAT WILL THEN REPLACE THE INNER HTML WITH THE JSON DATA-->
+        <!--    <article class="card">-->
+        <!--        <header class="card-header">-->
+        <!--            <h2 class="title">The Lord Of The Rings</h2>-->
+        <!--            <div class="rating">Rating: 5</div>-->
+        <!--            <div class="genre">Genre: Drama</div>-->
+        <!--            <button type="button" class="edit">Edit</button>-->
+        <!--            <button type="button" class="delete">Delete</button>-->
+        <!--        </header>-->
+        <!--    </article>-->
 
-<!-- Movie Card -->
-<div id="app">
-
-    <!--HARD CODING THE DATA TO SEE HOW THE CARDS ANIMATIONS WILL WORK WHEN WE INCORPORATE THE renderData FUNCTION THAT WILL THEN REPLACE THE INNER HTML WITH THE JSON DATA-->
-<!--    <article class="card">-->
-<!--        <header class="card-header">-->
-<!--            <h2 class="title">The Lord Of The Rings</h2>-->
-<!--            <div class="rating">Rating: 5</div>-->
-<!--            <div class="genre">Genre: Drama</div>-->
-<!--            <button type="button" class="edit">Edit</button>-->
-<!--            <button type="button" class="delete">Delete</button>-->
-<!--        </header>-->
-<!--    </article>-->
-
-
-
-</div>
-
+    </div>
+</main>
 <!--JQUERY-->
-<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+
+<script src="https://code.jquery.com/jquery-3.6.1.min.js"
+        integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
 <script src="main.js"></script>
 </body>
 </html>

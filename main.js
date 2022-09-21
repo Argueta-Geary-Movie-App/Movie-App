@@ -1,5 +1,15 @@
 "use strict";
-
+// PAGE LOADING MESSAGE
+document.onreadystatechange = function() {
+    if (document.readyState !== "complete") {
+        document.querySelector("body").style.visibility = "hidden";
+        document.querySelector("#loader").style.visibility = "visible";
+    } else {
+        document.querySelector("#loader").style.display = "none";
+        document.querySelector("body").style.visibility = "visible";
+    }
+    // alert("Page Loading");
+};
 // API
 function fetchData() {
     console.log("START FETCH");
