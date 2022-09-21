@@ -26,7 +26,7 @@ function fetchData() {
                                 </article>`
             }).join("")
             console.log(html);
-            $('#app').innerHTML = html;
+           document.querySelector('#app').insertAdjacentHTML("afterbegin", html);
         })
         .catch(error => {
             console.log(error);
