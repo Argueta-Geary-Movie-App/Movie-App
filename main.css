@@ -8,24 +8,33 @@ body {
 
 .jumbotron {
     background-color: red;
-    height: 30vh;
+    height: 50vh;
+    position: relative;
+}
+
+.container {
+    position: absolute;
+    left: 10px;
+    top: 30px;
 }
 
 #app {
     display: flex;
     padding: 3rem;
+    margin: 5rem;
+    flex-wrap: wrap;
 }
 
 .card {
     display: flex;
     position: relative;
     flex-direction: column;
-    height: 350px;
-    width: 400px;
-    min-width: 250px;
+    height: 500px;
+    width: 350px;
+    min-width: 300px;
     padding: 1.5rem;
 
-    border-radius: 16px;
+    border-radius: 50px;
     background: #17141D;
     box-shadow: -1rem 0 3rem black;
 
@@ -37,12 +46,13 @@ body {
 }
 
 .card:hover~.card {
-    transform: translateX(130px);
+    transform: translateX(125px);
 }
 
 .card:not(:first-child) {
-    margin-left: -130px;
+    margin-left: -80px;
 }
+
 .loader {
     border: 16px solid #f3f3f3;
     border-radius: 50%;
