@@ -7,15 +7,33 @@ body {
 }
 
 .jumbotron {
-    background-color: red;
     height: 50vh;
     position: relative;
+    background-image: url("Images/popcorn.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+
 }
 
 .container {
     position: absolute;
     left: 10px;
-    top: 30px;
+    top: 25px;
+    line-height: 1.5rem;
+}
+
+.container h1 {
+    font-family: 'Nabla', cursive;
+    font-size: 5rem;
+}
+
+.container h2 {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 2rem;
+}
+
+.container input {
+    width: 50%;
 }
 
 #app {
