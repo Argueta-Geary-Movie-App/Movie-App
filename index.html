@@ -6,45 +6,52 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Movie App</title>
+    <!--external CSS-->
     <link rel="stylesheet" href="main.css">
+    <!--GOOGLE FONTS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Serif:ital,wght@1,200&family=Nabla&display=swap" rel="stylesheet">
+
+
 </head>
 <body>
+<div id="loader">
+    <img id="loading-image" src="Images/Infinity-2.6s-304px.gif" alt="Loading..." />
+</div>
+<main id="main">
+<!-- Jumbotron -->
+    <div class="jumbotron">
 
-
-<div class="jumbotron">
-
-    <div class="container">
-    <h1>MOVIES-R-US</h1>
-    <h2>Showcasing the latest movies from the comfort of your home</h2>
-    <!--TEXT INPUT BOX TO ADD NEW MOVIE-->
-    <input class='find-movie' type="text" placeholder="Find a Movie">
-    <button class='find-movie' type="submit">Find Movie</button>
+        <div id="" class="container">
+            <h1>My Watchlist</h1>
+            <h2>What do you want to watch?</h2>
+            <!--TEXT INPUT BOX TO ADD NEW MOVIE-->
+            <input class='find-movie' type="text" placeholder="Search">
+            <button class='find-movie' type="submit">Find Movie</button>
+        </div>
     </div>
 
-</div>
+    <!-- Movie Card -->
+    <div id="app">
 
-<br>
+        <!--HARD CODING THE DATA TO SEE HOW THE CARDS ANIMATIONS WILL WORK WHEN WE INCORPORATE THE renderData FUNCTION THAT WILL THEN REPLACE THE INNER HTML WITH THE JSON DATA-->
+        <!--    <article class="card">-->
+        <!--        <header class="card-header">-->
+        <!--            <h2 class="title">The Lord Of The Rings</h2>-->
+        <!--            <div class="rating">Rating: 5</div>-->
+        <!--            <div class="genre">Genre: Drama</div>-->
+        <!--            <button type="button" class="edit">Edit</button>-->
+        <!--            <button type="button" class="delete">Delete</button>-->
+        <!--        </header>-->
+        <!--    </article>-->
 
-<!-- Movie Card -->
-<div id="app">
-
-    <!--HARD CODING THE DATA TO SEE HOW THE CARDS ANIMATIONS WILL WORK WHEN WE INCORPORATE THE renderData FUNCTION THAT WILL THEN REPLACE THE INNER HTML WITH THE JSON DATA-->
-<!--    <article class="card">-->
-<!--        <header class="card-header">-->
-<!--            <h2 class="title">The Lord Of The Rings</h2>-->
-<!--            <div class="rating">Rating: 5</div>-->
-<!--            <div class="genre">Genre: Drama</div>-->
-<!--            <button type="button" class="edit">Edit</button>-->
-<!--            <button type="button" class="delete">Delete</button>-->
-<!--        </header>-->
-<!--    </article>-->
-
-
-
-</div>
-
+    </div>
+</main>
 <!--JQUERY-->
-<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+
+<script src="https://code.jquery.com/jquery-3.6.1.min.js"
+        integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
 <script src="main.js"></script>
 </body>
 </html>
