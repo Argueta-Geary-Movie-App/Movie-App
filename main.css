@@ -101,3 +101,11 @@ body {
 .card div {
     font-family: 'IBM Plex Serif', serif;
 }
+
+button {
+    background-color: #FFAA01FF;
+    color: #063DAA;
+    top: 50%;
+    border-radius: 5px;
+    padding: 5px;
+}
