@@ -1,115 +1,117 @@
-body {
-    padding: 0;
-    margin: 0;
-    background-color: white;
-    color: white;
-}
+/* Small devices (phones and pocket devices, 576 and up) */
+/*@media screen and (min-width: 576px) {*/
+    body {
+        /*box-sizing: border-box;*/
+        /*max-width: 576px;*/
+        /*margin: auto;*/
+        padding: 0;
+        margin: 0;
+        background-color: white;
+        color: white;
+    }
 
-#loader {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    margin-top: 15%;
-    height: 300px;
-}
+    #loader {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        margin-top: 15%;
+        height: 500px;
+    }
 
-.container {
-    height: 115vh;
-    background-image: url("Images/blockbuster2.webp");
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-}
+    .container {
+        height: 115vh;
+        background-image: url("Images/blockbuster2.webp");
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+    }
 
-.search-movie {
-    float: left;
-    /*padding-top: 150px;*/
-    line-height: 0;
-    padding-top: 27vh;
-    margin-left: 25px;
-    position: absolute;
-}
+    .search-movie {
+        float: left;
+        /*padding-top: 150px;*/
+        line-height: 0;
+        padding-top: 27vh;
+        margin-left: 25px;
+        position: absolute;
+    }
 
-.search-movie h2 {
-    font-family: 'Nabla', cursive;
-    font-size: 4rem;
-    /*margin: 0;*/
-    /*padding-right: 3rem;*/
-    text-shadow: 2.5px 2.5px red;
-    text-align: center;
-}
+    .search-movie h2 {
+        font-family: 'Nabla', cursive;
+        font-size: 4rem;
+        /*margin: 0;*/
+        /*padding-right: 3rem;*/
+        text-shadow: 2.5px 2.5px red;
+        text-align: center;
+    }
 
-.search-movie input {
-    width: 64%;
-    /*height: 2em;*/
-}
+    .search-movie input {
+        width: 64%;
+        /*height: 2em;*/
+    }
 
-.search-movie button {
-    width: 30%;
-}
+    .search-movie button {
+        width: 30%;
+    }
 
-.spacer {
-    aspect-ratio: 900/450;
-    width: 100%;
+    .spacer {
+        aspect-ratio: 900/450;
+        width: 100%;
 
-}
+    }
 
+    #app {
+        background-color: #063DAA;
+        display: flex;
+        padding: 5rem;
+        flex-wrap: wrap;
+        padding-left: 15%;
 
-#app {
-    background-color: #063DAA;
-    display: flex;
-    padding: 5rem;
-    flex-wrap: wrap;
-    padding-left: 15%;
+        border-width: 20px;
+        border-style: solid;
+        border-image: linear-gradient(to right, #FFAA01, #FFDF00) 1;
+    }
 
-    border-width: 20px;
-    border-style: solid;
-    border-image: linear-gradient(to right, #FFAA01, #FFDF00) 1;
-}
+    .card {
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        height: 500px;
+        width: 350px;
+        min-width: 300px;
+        padding: 1.5rem;
+        margin: 2rem;
+        /* Uncomment for border-shadow box behind posters. Removed currently for better card visibility*/
+        /*border-radius: 50px;*/
+        /*background: #17141D;*/
+        /*box-shadow: -1rem 0 3rem black;*/
 
-.card {
-    display: flex;
-    position: relative;
-    flex-direction: column;
-    height: 500px;
-    width: 350px;
-    min-width: 300px;
-    padding: 1.5rem;
-    margin: 2rem;
+        /*transition: .2s;*/
+    }
 
-    border-radius: 50px;
-    background: #17141D;
-    box-shadow: -1rem 0 3rem black;
+    /*.card:hover {*/
+    /*    transform: translateY(-1rem);*/
+    /*}*/
+    /*.card:hover~.card {*/
+    /*    transform: translateX(125px);*/
+    /*}*/
+    /*.card:not(:first-child) {*/
+    /*    margin-left: -80px;*/
+    /*}*/
+    .card h2 {
+        font-family: 'Bebas Neue', cursive;
+        font-size: 2.5rem;
+    }
 
-    /*transition: .2s;*/
-}
+    .card div {
+        font-family: 'IBM Plex Serif', serif;
+    }
 
-/*.card:hover {*/
-/*    transform: translateY(-1rem);*/
+    button {
+        background-color: #FFAA01FF;
+        color: #063DAA;
+        top: 50%;
+        border-radius: 5px;
+        padding: 5px;
+    }
 /*}*/
-
-/*.card:hover~.card {*/
-/*    transform: translateX(125px);*/
-/*}*/
-
-/*.card:not(:first-child) {*/
-/*    margin-left: -80px;*/
-/*}*/
-
-.card h2 {
-    font-family: 'Bebas Neue', cursive;
-    font-size: 2.5rem;
-}
-
-.card div {
-    font-family: 'IBM Plex Serif', serif;
-}
-
-button {
-    background-color: #FFAA01FF;
-    color: #063DAA;
-    top: 50%;
-    border-radius: 5px;
-    padding: 5px;
-}
 
