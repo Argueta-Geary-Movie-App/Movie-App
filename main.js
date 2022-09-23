@@ -45,30 +45,30 @@ const fetchData = async () => {
 fetchData();
 
 // POST (Create)
-function postData() {
-    fetch('http://www.omdbapi.com/?apikey=${OMDB_KEY}&', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-
-        })
-    })
-        .then(response => {
-            if (!response.ok) {
-                throw Error("ERROR");
-            }
-            return response.json();
-        })
-        .then(data => {
-            console.log(data);
-        })
-        .catch(error => {
-            console.log(error);
-        });
-}
-postData();
+// function postData() {
+//     fetch('http://www.omdbapi.com/?apikey=${OMDB_KEY}&', {
+//         method: 'POST',
+//         headers: {
+//             'Content-Type': 'application/json'
+//         },
+//         body: JSON.stringify({
+//
+//         })
+//     })
+//         .then(response => {
+//             if (!response.ok) {
+//                 throw Error("ERROR");
+//             }
+//             return response.json();
+//         })
+//         .then(data => {
+//             console.log(data);
+//         })
+//         .catch(error => {
+//             console.log(error);
+//         });
+// }
+// postData();
 
 // PATCH
 // function patchData() {
