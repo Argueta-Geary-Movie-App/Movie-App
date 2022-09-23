@@ -101,7 +101,11 @@
         font-family: 'Bebas Neue', cursive;
         font-size: 2.5rem;
     }
-
+    /*
+    USE THIS to style cards. https://codepen.io/codev_land/pen/yLXeyWX
+    On hover, the card (movie poster) moves upwards while the bottom extends downwards, displaying info and buttons.
+    Or this one: https://codepen.io/markmead/pen/MqmOVB
+     */
     .card div {
         font-family: 'IBM Plex Serif', serif;
     }
