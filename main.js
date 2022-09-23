@@ -15,7 +15,7 @@ document.onreadystatechange = function () {
 
 // OMDB FETCH
 const moviePoster = async (title) => {
-    let posterData = await fetch(`http://www.omdbapi.com/?apikey=thewdb&t=${title}`)
+    let posterData = await fetch(`https://www.omdbapi.com/?apikey=thewdb&t=${title}`)
     let posterJson = await posterData.json();
     return posterJson;
 }
@@ -26,7 +26,7 @@ const fetchData = async () => {
     let glitchJson = await glitchData.json();
     const html = await Promise.all(glitchJson.map(async movie => {
         let omdbPoster = await moviePoster(movie.title);
-        console.log(omdbPoster.Poster);
+        // console.log(omdbPoster.Poster);
         return `<article class="card background-image: url">
                                     <header class="card-header">
                                         <h2 class="title">${movie.title}</h2>
@@ -46,14 +46,13 @@ fetchData();
 
 // POST (Create)
 function postData() {
-    fetch("https://reqres.in/api/users", {
+    fetch('http://www.omdbapi.com/?apikey=${OMDB_KEY}&', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-            name: "morpheus",
-            job: "leader"
+
         })
     })
         .then(response => {
@@ -69,8 +68,33 @@ function postData() {
             console.log(error);
         });
 }
-
 postData();
+
+// PATCH
+// function patchData() {
+//     fetch("https://reqres.in/api/users", {
+//         method: 'PATCH',
+//         headers: {
+//             'Content-Type': 'application/json'
+//         },
+//         body: JSON.stringify({
+//
+//         })
+//     })
+//         .then(response => {
+//             if (!response.ok) {
+//                 throw Error("ERROR");
+//             }
+//             return response.json();
+//         })
+//         .then(data => {
+//             console.log(data);
+//         })
+//         .catch(error => {
+//             console.log(error);
+//         });
+// }
+// patchData();
 
 // Event Listeners
 
