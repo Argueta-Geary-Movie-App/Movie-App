@@ -5,7 +5,9 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Movie App</title>
+    <title>Not Blockbuster App</title>
+    <!-- Favicon Links -->
+    <link rel="icon" type="image/png" sizes="16x16" href="Images/favicon_io/favicon-16x16.png">
     <!--EXTERNAL CSS-->
     <link rel="stylesheet" href="main.css">
     <!--GOOGLE FONTS-->
@@ -15,40 +17,38 @@
           rel="stylesheet">
 </head>
 <body>
+
 <!--LOADER IMAGE -->
 <div id="loader">
     <img id="loading-image" src="Images/loading4.gif" alt="Loading...">
 </div>
 
-
-    <!--JUMBOTRON -->
-    <div class="container">
-        <div class="search-movie">
-            <h2>Let's Rewind</h2>
-            <!--TEXT INPUT BOX TO ADD NEW MOVIE-->
-            <input class='find-movie' type="text" placeholder="No Need to Rewind">
-            <button class='find-movie' type="submit">Find Your Movie</button>
-        </div>
+<!--JUMBOTRON -->
+<div class="container">
+    <div class="search-movie">
+        <h2>Let's Rewind</h2>
+        <!--TEXT INPUT BOX TO ADD NEW MOVIE-->
+        <input class='find-movie' type="text" placeholder="No Need to Rewind">
+        <button class='find-movie' type="submit">Find Your Movie</button>
     </div>
+</div>
 
-<!--<section class="spacer layer1"></section>-->
+<!-- Movie Card -->
+<div id="app">
 
 
-    <!-- Movie Card -->
-    <div id="app">
+    <!--HARD CODING THE DATA TO SEE THE CARD ANIMATIONS WORK BEFORE WE ADD THE fetchData FUNCTION THAT WILL THEN REPLACE THE INNER HTML WITH THE JSON DATA-->
 
-        <!--HARD CODING THE DATA TO SEE THE CARD ANIMATIONS WORK BEFORE WE ADD THE fetchData FUNCTION THAT WILL THEN REPLACE THE INNER HTML WITH THE JSON DATA-->
-
-        <!--    <article class="card">-->
-        <!--        <header class="card-header">-->
-        <!--            <h2 class="title">The Lord Of The Rings</h2>-->
-        <!--            <div class="rating">Rating: 5</div>-->
-        <!--            <div class="genre">Genre: Drama</div>-->
-        <!--            <button type="button" class="edit">Edit</button>-->
-        <!--            <button type="button" class="delete">Delete</button>-->
-        <!--        </header>-->
-        <!--    </article>-->
-    </div>
+    <!--    <article class="card">-->
+    <!--        <header class="card-header">-->
+    <!--            <h2 class="title">The Lord Of The Rings</h2>-->
+    <!--            <div class="rating">Rating: 5</div>-->
+    <!--            <div class="genre">Genre: Drama</div>-->
+    <!--            <button type="button" class="edit">Edit</button>-->
+    <!--            <button type="button" class="delete">Delete</button>-->
+    <!--        </header>-->
+    <!--    </article>-->
+</div>
 
 <!--JQUERY-->
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"
