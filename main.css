@@ -45,19 +45,58 @@ body {
 }
 
 .search-movie input {
-    width: 64%;
+    width: 65%;
+    height: 1.5rem;
+    margin-right: 0.4rem;
+    padding-left: .5rem;
     /*height: 2em;*/
+
+    /*HERE*/
+    border: groove 1em #0065FF;
+    border-radius: 2em;
+    font-family: 'Bebas Neue', cursive;
 }
 
-.search-movie button {
-    width: 30%;
+button.find-movie{
+    display: inline-block;
+    border: 0.11em solid #FFDF00;
+    margin: 0 0.2em 0.2em 0;
+    height: 2rem;
+    /*border-radius: 10px;*/
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Bebas Neue', cursive;
+    font-weight: 300;
+    color: #FFAA01;
+    text-shadow: 0 0.04em 0.04em rgba(0,0,0,0.35);
+    background-color: #0065FF;
+    text-align: center;
+    transition: all 0.15s;
+    cursor: pointer;
+}
+button.find-movie:hover{
+    text-shadow: 0 0 2em rgba(255,255,255,1);
+    color: #0065FF;
+    background-color: #FFDF00;
+    border-color: #FFDF00;
+}
+@media all and (max-width:30em){
+    button.find-movie{
+        display:block;
+        margin:0.4em auto;
+        }
 }
 
 .spacer {
     aspect-ratio: 900/450;
     width: 100%;
 
+    /*START*/
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
+
 
 #app {
     background-color: #063DAA;
