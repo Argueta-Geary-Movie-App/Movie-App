@@ -1,10 +1,15 @@
 "use strict";
 // Code Along API for OMDB ONLY
 $(document).ready(() => {
-    alert(1);
+// Create event when form is submitted
+    $('#searchForm').on('click', (e) => {
+        // stops form from submitting file
+        console.log($('#searchText').val());
+        e.preventDefault();
+    });
 });
 
-
+//
 // LOADER
 document.onreadystatechange = function () {
     if (document.readyState !== "complete") {
