@@ -16,6 +16,7 @@
         position: relative;
     }
 
+
     .search-movie {
         float: left;
         line-height: .8rem;
@@ -40,6 +41,7 @@
         font-family: 'Bebas Neue', cursive;
         font-size: .75rem;
     }
+
 
     button.find-movie {
         display: inline-block;
@@ -290,6 +292,7 @@
 /*        margin:0.4em auto;*/
 /*        }*/
 /*}*/
+
 
 /*.spacer {*/
 /*    aspect-ratio: 900/450;*/
