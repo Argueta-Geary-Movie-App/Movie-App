@@ -20,7 +20,7 @@ body {
 
 .container {
     height: 115vh;
-    /*background-image: url("Images/blockbuster2.webp");*/
+    background-image: url("Images/blockbuster2.webp");
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
