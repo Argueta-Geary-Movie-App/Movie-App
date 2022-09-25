@@ -1,32 +1,37 @@
 "use strict";
-// Search Form Event
-$(document).ready(() => {
-// Create event when form is submitted
-    $('#searchForm').on('click', (e) => {
-        let searchText = $('#searchText').val();
-        getMovies(searchText);
-        // stops form from submitting file
-        e.preventDefault();
-    });
-});
-
-//  API URL
-const api_url = fetch('http://www.omdbapi.com/?apikey=thewdb&t=');
-
-//  Define Async Function
-async function getapi(url) {
-    //  Storing Response
-    const response = await fetch(url);
-    //  Storing Data in form of JSON
-    let data = await response.json();
-    console.log(data);
-    if (response) {
-        hideloader();
-    }
-    show(data);
+function fetchMovies () {
+    console.log("Start Fetch");
 }
-//  Calling Async Function
-getapi(api_url);
+fetchMovies();
+
+// Search Form Event
+// $(document).ready(() => {
+// // Create event when form is submitted
+//     $('#searchForm').on('click', (e) => {
+//         let searchText = $('#searchText').val();
+//         getMovies(searchText);
+//         // stops form from submitting file
+//         e.preventDefault();
+//     });
+// });
+//
+// //  API URL
+// const api_url = fetch('http://www.omdbapi.com/?apikey=thewdb&t=');
+//
+// //  Define Async Function
+// async function getapi(url) {
+//     //  Storing Response
+//     const response = await fetch(url);
+//     //  Storing Data in form of JSON
+//     let data = await response.json();
+//     console.log(data);
+//     if (response) {
+//         hideloader();
+//     }
+//     show(data);
+// }
+// //  Calling Async Function
+// getapi(api_url);
 
 //  Function Hiding the Loader
 // function hideLoader() {
@@ -34,25 +39,25 @@ getapi(api_url);
 // }
 
 // Function defining innerHTML
-function show(data) {
-    let card =
-        `<article class="card">
-               <header id="card-header" class="card-header">
-                   <h2 class="title">${movie.title}</h2>
-                   <div><img src=${omdbPoster.Poster}></div>
-                   <div class="rating">Rating: ${movie.rating}</div>
-                   <div class="genre">Director: ${movie.director}</div>
-                   <div class="id">${movie.id}</div>
-                   <button type="button" class="add" onclick="addToMyList()" >Add</button>
-                    <button type="button" class="edit">Edit</button>
-                    <button type="button" class="delete">Delete</button>
-             </header>
-        </article>`;
-}
-// Setting innerHTML
-document.querySelector('#app').insertAdjacentHTML("afterbegin", html);
-//  Invoke Function
-show(data);
+// function show(data) {
+//     let card =
+//         `<article class="card">
+//                <header id="card-header" class="card-header">
+//                    <h2 class="title">${movie.title}</h2>
+//                    <div><img src=${omdbPoster.Poster}></div>
+//                    <div class="rating">Rating: ${movie.rating}</div>
+//                    <div class="genre">Director: ${movie.director}</div>
+//                    <div class="id">${movie.id}</div>
+//                    <button type="button" class="add" onclick="addToMyList()" >Add</button>
+//                     <button type="button" class="edit">Edit</button>
+//                     <button type="button" class="delete">Delete</button>
+//              </header>
+// //         </article>`;
+// }
+// // Setting innerHTML
+// // document.querySelector('#app').insertAdjacentHTML("afterbegin", html);
+// //  Invoke Function
+// show(data);
 
 // LOADER
 document.onreadystatechange = function () {
