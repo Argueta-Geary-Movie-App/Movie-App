@@ -20,13 +20,13 @@ body {
 
 .container {
     height: 115vh;
-    background-image: url("Images/blockbuster2.webp");
+    /*background-image: url("Images/blockbuster2.webp");*/
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
 }
 
-.search-movie {
+.jumbotron {
     float: left;
     /*padding-top: 150px;*/
     line-height: 0;
@@ -35,7 +35,7 @@ body {
     position: absolute;
 }
 
-.search-movie h2 {
+.jumbotron h2 {
     font-family: 'Nabla', cursive;
     font-size: 4rem;
     /*margin: 0;*/
@@ -44,7 +44,7 @@ body {
     text-align: center;
 }
 
-.search-movie input {
+.jumbotron input {
     width: 65%;
     height: 1.5rem;
     margin-right: 0.4rem;
