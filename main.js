@@ -9,7 +9,7 @@ $(document).ready(() => {
     });
 });
 
-
+//
 // LOADER
 document.onreadystatechange = function () {
     if (document.readyState !== "complete") {
