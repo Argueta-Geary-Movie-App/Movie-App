@@ -1,6 +1,6 @@
 "use strict";
 function fetchMovies () {
-    console.log("Start Fetch");
+    fetch('https://aluminum-coral-comic.glitch.me/movies');
 }
 fetchMovies();
 
