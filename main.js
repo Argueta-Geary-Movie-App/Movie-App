@@ -34,10 +34,9 @@ const fetchData = async () => {
                                         <div class="rating">Rating: ${movie.rating}</div>
                                         <div class="genre">Director: ${movie.director}</div>
                                         <div class="id">${movie.id}</div>
-                                        <button id="add-button" type="button" class="add-button">Add</button>
-<!-- Remove Edit/Delete Buttons; add these buttons to movie info card -->
-<!--                                        <button id="edit button" type="button" class="edit">Edit</button>-->
-<!--                                        <button id="delete button" type="button" class="delete">Delete</button>-->
+                                        <button type="button" class="add">Add</button>
+                                        <button type="button" class="edit">Edit</button>
+                                        <button type="button" class="delete">Delete</button>
                                     </header>
                                 </article>`
     }))
@@ -98,11 +97,9 @@ fetchData();
 // patchData();
 
 // Event Listeners (Possibles: click, hover, scroll, search, submit, toggle)
-$('#add-button').on('click', function () {
-    alert('Add button works');
-});
+
 
 $('#find-movie').on('click', function () {
-    alert('Search button works.');
+    alert("Search button works.");
 });
 // HTML
