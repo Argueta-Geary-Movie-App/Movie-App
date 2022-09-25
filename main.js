@@ -27,13 +27,14 @@ const fetchData = async () => {
     const html = await Promise.all(glitchJson.map(async movie => {
         let omdbPoster = await moviePoster(movie.title);
         // console.log(omdbPoster.Poster);
-        return `<article class="card background-image: url">
+        return `<article class="card" style="background: rgb(255,255,255);
+background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,170,1,1) 50%, rgba(0,101,255,1) 100%);">
                                     <header class="card-header">
                                         <h2 class="title">${movie.title}</h2>
-                                        <div><img src=${omdbPoster.Poster}></div>
+                                        <img src=${omdbPoster.Poster}>
                                         <div class="rating">Rating: ${movie.rating}</div>
                                         <div class="genre">Director: ${movie.director}</div>
-                                        <div class="id">${movie.id}</div>
+                                        <div class="id" style="visibility: hidden">${movie.id}</div>
                                         <button type="button" class="add">Add</button>
                                         <button type="button" class="edit">Edit</button>
                                         <button type="button" class="delete">Delete</button>

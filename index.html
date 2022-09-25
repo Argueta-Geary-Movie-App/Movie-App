@@ -15,6 +15,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Serif:ital,wght@1,200&family=Nabla&display=swap"
           rel="stylesheet">
+    <!--BOOTSTRAP-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
 </head>
 <body>
 
@@ -24,7 +27,7 @@
 </div>
 
 <!--JUMBOTRON -->
-<div class="container">
+<div class="content col-sm-12 col-md-12 col-lg-12" id="smallIMG">
     <div class="search-movie">
         <h2>Let's Rewind</h2>
         <!--TEXT INPUT BOX TO ADD NEW MOVIE-->
@@ -33,8 +36,11 @@
     </div>
 </div>
 
+<div class="spacer layer1"></div>
+
 <!-- Movie Card -->
 <div id="app">
+
 
 
     <!--HARD CODING THE DATA TO SEE THE CARD ANIMATIONS WORK BEFORE WE ADD THE fetchData FUNCTION THAT WILL THEN REPLACE THE INNER HTML WITH THE JSON DATA-->
@@ -49,6 +55,8 @@
     <!--        </header>-->
     <!--    </article>-->
 </div>
+
+
 
 <!--JQUERY-->
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"
