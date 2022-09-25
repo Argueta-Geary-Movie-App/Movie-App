@@ -3,11 +3,16 @@
 $(document).ready(() => {
 // Create event when form is submitted
     $('#searchForm').on('click', (e) => {
+       let searchText = $('#searchText').val();
+       getMovies(searchText);
         // stops form from submitting file
-        console.log($('#searchText').val());
         e.preventDefault();
     });
 });
+
+function getMovies(searchText) {
+    console.log(searchText);
+}
 
 //
 // LOADER
